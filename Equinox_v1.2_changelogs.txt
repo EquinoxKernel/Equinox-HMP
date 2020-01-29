@@ -1,0 +1,298 @@
+05eeeaff3189 X00T_defconfig: enable TTL fixation
+a19e9b470aad Defconfig: Overhaul and optimize
+3417319d6a9f ASoC: msm: q6dspv2: vote for Glink Rx thread priority upgrade
+46ce9928602d media: v4l: Use interruptible waits
+91815e185d0a msm: sde: Use interruptible waits
+60234293a328 mmc: queue: Use interruptible wait
+2ab735b72d36 msm: mdss: Use interruptible waits
+e947d1edd3cc block: Do not wake the request CPU if idle
+cdb7becee9ea drivers: mdss: queue input handler functions to a high prio wq
+37b6385fd18a msm: Use interruptible wait to not affect load average
+b5583bdecb54 staging: android: ashmem: Get rid of the big mutex lock
+16d8d8cd5428 ext4: Allocate allocation-context on the stack
+d2176a9211c3 ext4 crypto: Use a larger on-stack file name buffer
+da9f130933c4 tcp: Disable SYN cookies
+bed0917c5fe2 tcp: Enable fast recycling by default
+6793bead706b tcp: Reuse existing connections
+f52c9f4a48ba tcp: Disable ping replies by default
+4a15784f178b tcp: Increase max connections to accept
+44d183d216f1 tcp: Disable slow start after idle by default
+7a22265e08e6 Added support for TTL fixation
+06cbbbf21df6 cpuidle: enter_state: Don't needlessly calculate diff time
+a01a4b92bde8 ARM: dts: sdm660: Suppress verbose output during boot
+0e98f96ada5b msm: kgsl: Use interruptible waits
+4a76c9edd80e msm: kgsl: Update GPU idleness check when RB is empty
+28c21d04c2dd msm: kgsl: run kgsl-workqueue as a high prio wq
+9704da6e4a7f msm: kgsl: Increase priority of RT thread
+b0d006196f9a gpu: msm: Do not compile Adreno 3xx / 4xx drivers
+655c14e4af2b msm: kgsl: Remove POPP
+f91e35811f5f msm: kgsl: Disable unused GPU OPP
+5c664942a3c1 msm: kgsl: Only wake GPU upon ioctl receipt when it isn't awake
+1ea98ad37302 msm: kgsl: Wake GPU upon receiving an ioctl rather than upon touch input
+f4e3d774b762 msm: kgsl: Mark IRQ and worker thread as performance critical
+9693d7ff0ec7 Revert "msm: kgsl: Don't try to wait for fences that have been signaled"
+679c10bdad1a cpu_input_boost: disable touch boosting
+e46a6e3d1d46 CHROMIUM: cpufreq: interactive: calculate load before freq change
+55a571206e1a cpufreq: interactive: Remove the jump_to_max hack
+85ea5eef5cdf cpufreq: interactive: remove hispeed_freq init restriction
+dc25d1aacb29 kernel: Improve performance critical IRQ framework
+26df9fae7283 genirq: Use interruptible wait
+be199e05b192 cfq-iosched: temporarily boost queue priority for idle classes
+e2f97c7f32e8 cpuset: fix hotplug lock
+9254722238ec Workaround for sensor ipc message causing high power consume
+c8736f33a460 soc: qcom: sleepstate: Move delay to suspend path
+81f9452487b3 soc: qcom: sleepstate: Tune suspend and resume delays
+9e41965bc2c8 qpnp-fg-gen3: add cycle_counts_bins device driver attribute
+2e4aea5cd3bd power: qpnp-fg-gen3: fix soc not keeping full after charging overnight
+9b9ec0ed1053 qcom: msm-core: uninterruptible wait - you can kiss my arse goodbye
+35eba7482aad qcom: mpm: use interruptible wait to reduce load avg
+19581fd2025f [SQUASH] Treewide: Fix direct references to HZ
+8a6b964237e5 ALSA: control_compat: Don't dynamically allocate single-use structs
+5cb9bfb02b54 msm: kgsl: Don't allocate memory dynamically for drawobj sync structs
+e707403a820d iommu: arm-smmu: Free pgtbl ops when domain contexts are destroyed
+c2a583a6080c smp: Wake up all idle CPUs when suspending to idle
+9f477a652026 pinctrl: qcom: Add irq_enable callback for msm gpio
+351c4d28cf2c genirq: Add generic action name for chained IRQs
+b951e97736af power: Improved/fixed logs for PM wakeups
+c23b5734bafe fs: Improve eventpoll logging to stop indicting timerfd
+9cb4743ba579 fs: add useful debug info to eventpoll string
+d601fe280d99 PM: wakeup_reasons: Fix formatting for printk
+9050f79ba629 power: Add detailed suspend abort reason
+5cd368d90436 power: wakeup_reason: make log function work in interrupt context
+ba704870fec0 irqchip: msm: log wakeup interrupts
+6acaa3c6c114 pinctrl: qcom: unconditionally mark handled in msm_gpio_irq_handler
+7275ce156849 pinctrl: qcom: log wakeup reason
+3648b8ca49c5 irq: Add wakeup reason logging
+961b560af873 BACKPORT: PM: wakeup_reasons: disable wakeup-reason deduction by default
+a223e15fcdb7 PM: wakeup_reasons: fix race condition
+d43459de5e76 BACKPORT: PM: wakeup_reason: add functions to query and clear wakeup reasons
+dfb39cd9f2bd pinctrl/qcom: pinctrl-msm.c: Bypass GPIO pins owned by TZ
+d802a4604f31 drivers: pinctrl: mask non-wakeup interrupts in suspend path
+9d107611a469 dsp: asm: improve misleading logs
+fa961971f9bf arm64: strcmp: align to 64B cache line
+376fef2e7fd8 kernel: cgroup: Use create_workqueue instead of alloc_workqueue.
+e14d366fbf74 CHROMIUM: selinux: Do not log permissive denials
+f3162d26c4a5 tick: Don't clear idle and iowait sums on CPU down
+5620b0f42ed2 nohz: fix idle and iowait stats discrepancy
+4b89cce1514b mm: skip swap readahead when process is exiting
+a586df9f54f9 tcp: fastopen: support TCP fast open on all listeners
+d2dfd41ee107 net: ipv4: enable support for TCP fast open on listeners
+0d65cd898be2 arm64: debug: disable self-hosted debug by default
+705218736f90 Optimized Console FrameBuffer for upto 70% increase in Performance
+a71836cdc2f0 printk: add Kconfig option to set default console loglevel
+202c1e3af2b5 dts: sdm660: disable hotplug in BCL mitigation
+7ceda2d6bee7 msm: camera: Do not wait for complete during driver_probe
+fead029b70b3 ion: avoid allocate high order of pages in system heap pools
+3529a6de742d msm: vidc: Use seq_file for debugfs interface
+e0dc503aa3a4 mm: swap: swap pages one at a time
+838eb520d846 arm64: Select ARCH_HAS_FAST_MULTIPLIER
+6dfdbdf1ed3a adreno: Properly set GPU timeout
+2c697d6246a9 irq: Silence IRQ CPU migration message
+5ef4bf593a93 ANDROID: binder: Switch binder_deferred_lock to a spinlock.
+ef4bc745f85c msm: vidc: kill opening/closing video instance logspam
+73019d30c40a binder: Fix concurrency issue in target_thread wakeup
+06badf09b3d1 msm: kgsl: Stop slab shrinker when no more pages can be reclaimed
+d5090b8d3422 asoc/msm: Reduce min capture size
+b761e9ce0ddd ASoC: msm-cpe-lsm: Fix out of bounds write in msm_cpe_lsm_ioctl_compat
+956148534906 msm: kgsl: Fix drawqueue timer race condition
+c1602c1e1879 msm: kgsl: Omit referencing pointers in traces
+10f21743ebc4 drivers: cpu-idle: lpm-levels: Use cpuidle disable sysfs
+6faee5ceb1c5 fib_rules: Fix payload calculation
+253c80491c17 net/ipv4: fib_trie: Avoid cryptic ternary expressions
+80aeeecbefb1 iommu: do not attempt reclaim on higher order allocs
+47b6e1e60ab4 tick/nohz: Optimize nohz idle enter
+a4bdccd86d33 power: msm-core: Fix mutex not getting unlocked in error path
+26fc59067489 ASoC: Silence platform not registered message
+c3a3fd5fe1e4 msm: mdss: Fix uninitialized vsync_time in mdss_mdp_cmd_pingpong_done
+6d8f0acdb435 arm64: arch_timer: simplify accessors
+2b4e7fefdfd0 ANDROID: binder: correct the cmd print for BINDER_WORK_RETURN_ERROR
+6d87cb3d1a09 msm: kgsl: Don't try to wait for fences that have been signaled
+e16cbf0308d6 binder: fix incorrect cmd to binder_stat_br
+ffb953e04421 mm: kmemleak: Don't die when memory allocation fails
+ac5943456a60 mm: kmemleak: Don't require global debug options
+42dacfce4219 arm64: vdso: Mark vdso_pagelist allocation as not a leak
+e9dc7ea0dac3 dts: Set GPU idle timeout to 64 ms
+84ed08e2838c interactive: avoid calling usecs_to_jiffies() repeatedly
+a032c7dded38 arm64: Use optimized memcmp
+5711279aa1cc ASoC: core: Don't assign an out-of-bounds address to rtd_aux
+55a6c6412572 devfreq: Avoid competing with low-priority tasks
+9900fa74231a PM: devfreq: Use high priority workqueue
+6054094a9717 cpufreq: cpu-boost: Improve error checks for input_boost_freq
+b5ec5173e6a9 selinux: stop flooding the log buffer
+4ef4881844fe msm: kgsl: move kgsl_3d_init to async
+9f412827922f Silences WLAN, PCIe, and CPU suspend state kernel messages
+0ee474d7ef9c do not call trace_printk on non-debug build
+c0e705931d10 remove calls to trace_printk
+4c060d9c9789 msm: ipa3: Return if RT table size is 0
+ced3ced05a4f msm: camera: properly initialize vfe
+a135cd9acd38 i2c-msm-v2: allow i2c_adapter to retry on arbitration lost
+a68bb894d1d2 mfd: wcd9xxx: disable slimbus register access for debugfs
+9d2465eab22f PM / devfreq: memlat: Don't ignore extremely latency sensitive workloads
+35b022406e87 CHROMIUM: sched/fair: Kill spam about max cpu_capacity
+ab63c5e27827 kernel: time: reduce ntp wakeups
+94491b100a4d ion: use unbounded wq for prefetch work
+3b5ab502c6f5 tcp_westwood: use tcp_jiffies32 instead of tcp_time_stamp
+d28144f2524e tcp: introduce tcp_jiffies32
+c965c210e217 HACK: fingerprint: use realtime mutex
+6df81efa5248 input: cdfinger: Convert To Wakeup sources
+685951967841 input: cdfingerfp: rework fingerprint driver > Remove not so necessary ioctl commands > Converted some inapt int type to bool type > Simplify wake_lock by implementing wake_lock_timeout > Remove IRQ regulator and simplify enabling and disabling IRQ > Remove fp_boost > Remove sched_boost trigger > Remove cluttering comments > Remove codes separated by 'ifdef's. Keep the codes necessary. > Remove duplicate checks, triggers.
+e72995d75553 input: touchscreen: enable dt2w by default
+50c8e982475f input: goodix: Use common keycodes for fp gestures
+f79b6d030654 input: touchscreen: Switch to gesture_node for gesture detection
+53ce078ee875 input: fingerprint: goodix: Rename input event
+d1918a50222f Revert "oX00T: input: touchscreen: unlock more gestures and unify node between gestures and dt2w"
+5aec9763fcfe X00T_defconfig: update
+0d15a6fe9793 selinux: Remove audit dependency
+dd161e37bf26 msm: vidc: disable debug logs
+d6b69da3be68 net: sch_generic: Remove unnecessary watchdog warning
+3909e5f4438e staging: binder - Set binder_debug_mask=0 to suppress logging
+76e248b7d8f4 disable crc check
+509c3144beca proc: Remove additional SafetyNet flags from /proc/cmdline
+05c5d449ea34 proc: Remove verifiedbootstate flag from /proc/cmdline
+72810b659fd3 cpuidle: Do not select menu and ladder governors
+7820ce689af3 cpuidle: Optimize pm_qos notifier callback
+e3383dedc646 cpuidle: lpm-levels: Allow exit latencies equal to target latencies
+03e06758ffb4 Treewide: Add "queue work on power efficient wq" patchset
+f19273bc5197 msm_thermal: fix declaration of msm_lmh_dcvsh_sw_notify
+870a1396181b msm: thermal: Fix compile errors when debugfs is disabled
+af25d2b0e18e X00T_defonfig changes for equinox
+da7a7f1137d9 fs: exec: block nfs injector from launching
+1c731f6788b4 fs: introduce unwated apps blocker
+18bab26b5b20 fs: f2fs: use f2fs_info instead of f2fs_msg
+316fc343e42f f2fs: use a seperate mutex for setting wakelock
+3a9222ad369c f2fs: Fix absolute jiffy duration in write uncongestion timeout
+4838c8bc38f1 f2fs: trigger rapid GC only when screen state actually changes
+ac4ce87dd31f f2fs: unlock wakelock properly when f2fs_stop_rapid_gc() is called
+293715930318 f2fs: catch a global wakelock instead of per gc_kthread
+c28753a64bf6 f2fs: improve naming schemes for rapid GC
+aa653d805653 f2fs: mark gc_threads() functions as static
+f57be54096c2 quota_tree: Avoid dynamic memory allocations
+809e5c5a296b kernfs: use kmem_cache pool for struct kernfs_open_node/file
+0d36027eb32b sdcardfs: use kmem_cache pool for struct sdcardfs_file_info
+c52255418835 fs: drop_caches: expose mm_drop_caches()
+c3af18771e08 fs: default to noatime
+50b41d0ddd29 writeback: hardcode dirty_expire_centisecs=3000 (30s)
+b5b9b31308f4 ANDROID: vfs/ext4,f2fs: finish umount(2) in time with filesystem work
+fecd1c4b073a f2fs: always assume that the device is idle under gc_urgent
+2e6b958bacee f2fs: don't wait with each discards under gc_urgent
+e78698151e43 f2fs: use a more reasonable discard policy for high utilization
+d936458bd2c4 f2fs: reduce timeout for uncongestion on f2fs_write_cache_pages()
+0a7ea25064de f2fs: rename /sys/fs/f2fs
+006d76141374 f2fs: do not expose tunables that doesn't work with rapid GC
+37e2061fd471 f2fs: drop caches upon rapid GC exit
+af697e0b2e29 f2fs: explicitly flush device upon foreground GC
+1637954c794b f2fs: fix rapid GC breakage from merge 4e87f7d2befb8
+725b97cf02d9 f2fs/rapid_gc: do not wait until all invalid blocks are discarded
+62ab9f270854 f2fs: convert wakelock APIs to wakeup_source
+2d90ba3d227c f2fs: implement rapid GC for Android
+4873b14a49c3 f2fs: set ioprio of GC kthread to idle
+2283f07f63a4 f2fs: use 1ms for discarding under GC_URGENT
+8127c7be13e0 sdcardfs: disable debug
+2dd63f3b724f ARM: dts: sdm660: Pool msm-thermal every 200ms
+49beab540632 sdm660-mdss-panels: Battery Saving :v
+3865e9b5ca48 msm: thermal: Add sysfs nodes to control parameters
+6762f1e071bf msm: thermal: Check temperature only if probed
+31247a530cf2 msm_thermal: initialize later than arch drivers
+b401126d561a drivers: thermal: Use deferrable work and power efficient workqueue
+40b8b9b9abbc drivers: thermal: Use high priority work queue for thermal processing
+7bd47bda7ea7 thermal: qpnp-adc-tm: release lock upon disable_chan_meas failure
+7595316f75d8 cpuidle: Don't enable all governors by default
+f62b6386fc7b drivers: cpuidle: lpm-levels: Reset suspend wake time
+35dccf4d781c cpuidle: lpm-levels: Do not predict LPM for isolated cpus
+5bca4c44211a lpm_levels: Return true for CPU WFI mode allow check
+e5b5aef678c2 cpufreq: conservative: unlock sample_rate
+1da38fba0149 cpufreq: conservative: Decrease frequency faster when the timer deferred
+9cf3c6c70d0d cpufreq: conservative: Fix comment explaining frequency updates
+12d5e1ee0fa5 cpufreq: interactive: Skip timer when policy->min == policy->max
+bdd7d1eaabbb cpu_input_boost: Mark boost kthread as performance critical
+8e1eaddfef85 cpu_input_boost: Introduce driver for event-based CPU boosting
+4a4741959195 cpufreq: Kill userspace CPU boosting entirely
+4148b5a08e78 kernel: Force trivial, unbound kthreads onto low-power CPUs
+3bc854eb096e kernel: Don't override do_set_cpus_allowed() for perf-critical tasks
+10f0fd8a1a4c kernel: Force trivial, unbound kthreads onto low-power CPUs
+81a845327eec kernel: Add API to mark IRQs and kthreads as performance critical
+6f187d1ee062 sched: hmp: Reduce number of load reports in a window
+ae0edf37565d sched: cpufreq: HMP load reporting changes
+1eb9e8c15ace core_ctl: Consider high irq loaded CPU as busy
+6853921a44dc sched: set loop_max after rq lock is taken
+fe1bb15bdb66 ntfs: decompress: remove VLA usage
+23b99defa74f ntfs: aops: remove VLA usage
+b9133ca05f4e ntfs: mft: remove VLA usage
+46318405ab29 [TEMP]sound: wcd9xxx: avoid VLA
+3e084b7242ae dm verity fec: Remove VLA usage
+6eb369e8e104 sound: wcd9xxx: avoid VLA
+bc1ac7748129 drivers: fbdev: mdss_hdmi_tx: avoid VLA
+f0bf553a61bd drivers: synaptics_dsx_e7s: avoid VLA
+4e9326655054 drivers: char: diag: avoid VLA
+92c6a50e67e3 drivers: camera_v2/sensor/io: avoid VLA
+af47ef701feb msm: vidc: avoid VLA
+f3cb6fbe971f crypto: avoid VLA
+641b86e085d9 mfd: wcd9xxx-irq: avoid VLA
+96230d596f12 gpio: Remove VLA from gpiolib
+2af53cfacf38 crypto: remove several VLAs
+9f1e2e255685 msm: camera: avoid VLA
+81a140db760f crypto: msm: qcrypto: avoid vla
+57a0f6bb0cf2 crypto: aead - Add chunk size
+cddc439f1ead msm_smem: make temp_string_size a constant to avoid VLA
+235c3364c4f1 crypto: api - Introduce generic max blocksize and alignmask
+200ea4a276cb crypto: shash - Remove VLA usage in unaligned hashing
+2490b6d87c26 crypto: hash - Remove VLA usage
+bf153ec3324d crypto: xcbc - Remove VLA usage
+3b208bd98c7e crypto: api - laying defines and checks for statically allocated buffers
+47053c3e4652 xfrm: remove VLA usage in __xfrm6_sort()
+25047a170a0b netfilter: nfnetlink: Remove VLA usage
+8451d1c8b0f2 rtnetlink: Fix null-ptr-deref in rtnl_newlink
+2a473e97f5a8 rtnetlink: Remove VLA usage
+f418b7ec1ba2 pstore/ram: Do not use stack VLA for parity workspace
+2924914e1f16 rslib: Allocate decoder buffers to avoid VLAs
+04241b1d6e48 rslib: Split rs control struct
+06c234689d67 rslib: Simplify error path
+bfa189ffc7dd rslib: Remove GPL boilerplate
+e3029353319c rslib: Add SPDX identifiers
+6abdf1e74818 rslib: Cleanup top level comments
+1264383b4a53 rslib: Cleanup whitespace damage
+29209ead2646 rslib: Add GFP aware init function
+8f4909f84045 dm stripe: get rid of a Variable Length Array (VLA)
+77b41e3a8e09 ALSA: pcm: Remove VLA usage
+5f4d87a1bef2 libceph: Remove VLA usage of skcipher
+ece69ac32bb6 libceph: Remove unnecessary ivsize variables
+54ddcf5e52ed libceph: Use skcipher
+571720e9d10c block: cryptoloop: Remove VLA usage of skcipher
+4a64620a41be block: cryptoloop - Use new skcipher interface
+0d935d00bbf9 gss_krb5: Remove VLA usage of skcipher
+8343423c338d sunrpc: Fix skcipher/shash conversion
+7cdff84fadb6 sunrpc: Use skcipher and ahash/shash
+dbf917fea11e crypto: skcipher - Introduce crypto_sync_skcipher
+947bbc5c9c87 compiler.h: give up __compiletime_assert_fallback()
+645038335569 qcacld-3.0: Nuke as much debug bloat as possible
+556d29700583 qcacld: nuke rx_wakelock code entirely
+471e08240a98 smb-lib.c:add more ICL & FAST_CHG_CURRENT_VALUE
+8533e7073af7 mdss mdp: kcal for mdss_mdp_v1_7
+fe9fe0f5b732 sound: sdm660_cdc: Correct the limits
+9e8d4ce6dea1 sound: sdm660_cdc: add sound control
+bdc5809f1d54 qpnp-haptic: make its strength adjustable via VibratorHW
+37b49019c5c0 arm64: add CPU optimizations
+a088146d741b oX00T: input: touchscreen: unlock more gestures and unify node between gestures and dt2w
+6cde68616b38 adrenoboost: disable by default
+9a9ed8af06b1 adrenoboost: finetuning algorithm - scale it a bit down
+12e68f8f935c msm_adreno_tz: add adrenoboost parameter
+ed3abb675578 adreno_idler: Disable adreno_idler by default
+bed47f16c466 adreno idler: Ramp down more agressively
+ae537ecd820a adreno_idler: fix typos :)
+cb89a2af96ff adreno_idler: fix-up some comments
+37098d651bb9 adreno_idler: fix-up type definitions
+c91ab829b976 adreno_idler: remove frequency bump
+9ce3fed15864 adreno_idler: switch to count based instead of time based
+47db93fa482e Introduce Adreno idler for devfreq-based Adreno devices
+4a8397a961e0 ARM: sdm660-gpu: Use a default powerlevel of 5 (160 MHz)
+6d72794f8465 ARM: sdm660-gpu: Use a default powerlevel of 5 (160 MHz)
+31ce498c2340 power/irq/time: Silence loggers
+1a931680b831 add stk_input_wakelock in boeffla blocker
+668ac74afa56 boeffla_wl_blocker: add IPCRTR_lpass_rx and hal_bluetooth_lock to the default list
+3ddc7b371458 wl_blocker: add more wakelocks to the default block list
+8a77256ecc80 wl_blocker: Populate default list
+0c252b2d6d1a boeffla_wl_blocker: update to wakelock blocker driver v1.1.0
+b7c5ae909c74 boeffla_wl_blocker: update to wakelock blocker driver v1.0.1
+bcd24ff7e26e boeffla_wl_blocker: add generic wakelock blocker driver v1.0.0
+bfeae1fe5d69 cpuidle: don't disable cpuidle when entering suspend
+0737d01093c4 msm: vidc: remove additional checks in response_handler
