@@ -1,3 +1,19 @@
+================================================
+Equinox v1.3
+===============================================
+Merged caf tag : LA.UM.8.2.r1-06200-sdm660.0
+Upstreamed to Linux 4.4.216 
+binder: Import from android-4.19 
+Nuked more logging and debugging
+Nuked some redundant governors
+Removed permissive state for system services
+Nuked  wireguard for now .
+Fixed wrong battery temp report (credit : Ajai)
+Fixed gcam issue
+
+================================================
+Equinox v1.2
+================================================
 05eeeaff3189 X00T_defconfig: enable TTL fixation
 a19e9b470aad Defconfig: Overhaul and optimize
 3417319d6a9f ASoC: msm: q6dspv2: vote for Glink Rx thread priority upgrade
